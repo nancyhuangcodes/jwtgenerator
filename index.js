@@ -2,7 +2,7 @@
 // Addtional reference: https://codedamn.com/news/nodejs/use-json-web-token-jwt-in-nodejs#handling_token_expiration
 
 // perform npm install jsonwebtoken, OR
-// perform npm install jasonwebtoken --save-dev (to keep the token as a developer dependency)
+// perform npm install jasonwebtoken --save-dev (to keep the dependency as a developer dependency)
 
 import jwt from "jsonwebtoken";
 
