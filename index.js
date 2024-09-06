@@ -11,9 +11,10 @@ function generateToken(user) {
     
     const payload = {                                   // Create the payload to be signed,
         username: user.username,                        // using the passed-in parameter's user.username                        
-        email: user.email                               // using the passed-in parameter's user.email
+        email: user.email,                              // using the passed-in parameter's user.email
+        role: user.role,                                // TODO: pass in the role as part of the user payload
     };
-
+    
     const secret = "your-refresh-token-secret";         // Secret key to encode the token (sample only, never use a weak secret token) 
     const options = { expiresIn: "365d" };              // Token expires in 1 year from the date of generation
   
@@ -24,7 +25,7 @@ function generateToken(user) {
 const user = {
     username: "momorunner",                             // username created as part of the user token
     email: "martin@example.com",                        // email created as part of the user token
-                                                        // TODO: upcoming challenge, generate a role for a token 
+    role: "ADMIN"                                       // TODO: generate a role "ADMIN" for the user token 
 };
 
 const newAccessToken = generateToken(user);             // invoke generateToken to create a new token to use
